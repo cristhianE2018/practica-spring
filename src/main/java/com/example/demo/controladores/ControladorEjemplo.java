@@ -22,4 +22,9 @@ public class ControladorEjemplo {
         return mav;
     }
 
+    @GetMapping("prueba")
+    public String ejemplo(){
+        return "prueba";
+    }
+
 }
