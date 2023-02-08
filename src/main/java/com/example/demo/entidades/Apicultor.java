@@ -10,8 +10,8 @@ public class Apicultor {
 
     }
 
-    public Apicultor(String id_apicultor, String nombre, Integer numero_apiarios, Integer numero_empleados, String correoElectronico) {
-        this.id_apicultor = id_apicultor;
+    public Apicultor(String id_apicultores, String nombre, Integer numero_apiarios, Integer numero_empleados, String correoElectronico) {
+        this.idApicultores = id_apicultores;
         this.nombre = nombre;
         this.numeroApiarios = numero_apiarios;
         this.numeroEmpleados = numero_empleados;
@@ -19,7 +19,8 @@ public class Apicultor {
     }
 
     @Id
-    private String id_apicultor;
+    @Column(name = "id_apicultores")
+    private String idApicultores;
 
     @Basic
     private String nombre;
@@ -38,11 +39,11 @@ public class Apicultor {
 
 
     public String getId_apicultor() {
-        return id_apicultor;
+        return idApicultores;
     }
 
     public void setId_apicultor(String id_apicultor) {
-        this.id_apicultor = id_apicultor;
+        this.idApicultores = id_apicultor;
     }
 
     public String getNombre() {
