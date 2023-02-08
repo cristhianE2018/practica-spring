@@ -68,6 +68,13 @@ public class ControladorApicultores {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("apicultores/busqueda/{n1}")
+    public List<Apicultor> getApicultoresupton1(
+            @PathVariable("n1") Integer n1)
+    {
+        return this.repoApicultor.getApicultoresUpToNumeroApiarios(n1);
+    }
+
 
 
 }
